@@ -1,6 +1,6 @@
 FROM python:2.7
 RUN pip install prometheus_client
-RUN apt-get update && apt-get install -y ipmitool
+RUN apt-get update && apt-get install -y ipmitool freeipmi
 COPY ipmi_exporter.py /
 
 # Set environment variables
